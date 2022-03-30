@@ -17,18 +17,19 @@
                echo "A ordem decrescente é: " .$n2 .$n1 .$n3; 
             }
             else{
-                echo "A ordem decrescente é: " .$n2 .$n3 .$n2;
+                echo "A ordem decrescente é: " .$n2 .$n3 .$n1;
             }
         }
-    }
+    
     else{
         if($n3>$n1 and $n3>$n2){
             if($n1>$n2){
                 echo "A ordem decresecente é: " .$n3 .$n1 .$n2;
             }
             else{
-                echo "A ordem decresecente é: " .$n3 .$n2 .$n3;
+                echo "A ordem decresecente é: " .$n3 .$n2 .$n1;
             }
         }
+    }
     }
 ?>
