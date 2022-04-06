@@ -1,4 +1,4 @@
 <?php
 $palavra= "banana";
-    echo "Avaráivel contém: " .strlen($palavra) . "caracteres" . "<br>";
+    echo "A varáivel contém: " .strlen($palavra) . " caracteres" . "<br>";
 ?>
