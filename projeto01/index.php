@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Menu principal</h1>
+    <hr>
     <div id="menu">
     <ul>
         <li><a href="cadastro_usuario.htm">Cadastro Usuário</a></li>
