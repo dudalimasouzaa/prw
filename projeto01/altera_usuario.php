@@ -21,11 +21,11 @@
 </head>
 <body>
     <h1> Alteração de ususário</h1>
-    <form action="cadastro_usuario.php" method="post">
-        
+    <form action="altera_usuario_exe.php" method="post">
         Nome: <input name="nome" value="<?php echo $row['nome_usuario']?>" size= "50" type="text"><br>
         E-mail: <input name="email" value="<?php echo $row['email_usuario']?>" size= "50" type="text"><br>
         Telefone: <input name="tel" value="<?php echo $row['telefone_usuario']?>" size= "30" type="text"><br>
+        <input name="id_usuario" type="hidden" value="<?php echo $row['id_usuario']?>">
         <br><br><input id="btnEnviar" type="submit" value="Enviar">
     </form>
     <div>
