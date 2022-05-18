@@ -1,3 +1,11 @@
+<?php
+    include('conexao.php');
+    $id_agenda = $_GET ['id_agenda'];
+    $sql = 'SELECT *FROM agenda where id_agenda='.$id_agenda;
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +15,20 @@
     <title>Document</title>
 <style>
     body{
-        background-color: orange;
+        background-color: orangered;
     }
 </style>
 </head>
 <body>
-    <h1> Cadastro</h1>
-    <form action="cadastro_agenda.php" method="post">
-        
-        Nome: <input name="nome" size= "50" type="text"><br>
-        <p>Apelido: <input name="apelido" size= "50" type="text"><br>
-        <p>Endereço: <input name="endereco" size= "30" type="text"><br>
-        <p>Bairro: <input name="bairro" size= "30" type="text"><br>
-        <p>Cidade: <input name="cidade" size= "30" type="text"><br>
-        <p>Estado: <select name="estado" >
+    <h1> Alteração da agenda</h1>
+    <form action="altera_agenda_exe.php" method="post">
+        Nome: <input name="nome" value="<?php echo $row['nome']?>" size= "50" type="text"><br>
+        Apelido: <input name="apelido" value="<?php echo $row['apelido']?>" size= "50" type="text"><br>
+        Endereço: <input name="endereco" value="<?php echo $row['endereco']?>" size= "50" type="text"><br>
+        Bairro: <input name="bairro" value="<?php echo $row['bairro']?>" size= "50" type="text"><br>
+        Cidade: <input name="cidade" value="<?php echo $row['cidade']?>" size= "50" type="text"><br>
+        Estado: 
+        <select name="estado" id="">
             <option value="MT">MT</option>
             <option value="MG">MG</option>
             <option value="CE">CE</option>
@@ -46,11 +54,11 @@
             <option value="AC">AC</option>
             <option value="RR">RR</option>
             <option value="TO">TO</option>
-            <br>
-            </select>
-        <p>Telefone: <input name="telefone" size= "30" type="text"><br>
-        <p>Celular: <input name="celular" size= "30" type="text"><br>
-        <p>Email: <input name="email" size= "30" type="text"><br>
+        </select><br>
+        Telefone: <input name="telefone" value="<?php echo $row['telefone']?>" size= "30" type="text"><br>
+        Celular: <input name="celular" value="<?php echo $row['celular']?>" size= "30" type="text"><br>
+        E-mail: <input name="email" value="<?php echo $row['email']?>" size= "50" type="text"><br>
+        <input name="id_agenda" type="hidden" value="<?php echo $row['id_agenda']?>">
         <br><br><input id="btnEnviar" type="submit" value="Enviar">
     </form>
     <div>
