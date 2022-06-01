@@ -27,7 +27,23 @@ $email= $_POST['email'];
 echo "<h1> Alteração de dados </h1>";
 echo "<p> Nome usuário: " .$nome . "<p>";
 
+if(strlen($fotoNome)>0){
 $sql = "UPDATE agenda SET
+        nome='".$nome."',
+        apelido='".$apelido."',
+        endereco='".$endereco."',
+        bairro='".$bairro."',
+        cidade='".$cidade."',
+        estado='".$estado."',
+        telefone='".$telefone."',
+        celular='".$celular."',
+        email='".$email."',
+        foto_blob='".$fotoBlob."',
+        foto_nome='".$fotoNome."'
+        WHERE id_agenda=".$id_agenda;
+}
+else{
+    $sql = "UPDATE agenda SET
         nome='".$nome."',
         apelido='".$apelido."',
         endereco='".$endereco."',
@@ -38,7 +54,7 @@ $sql = "UPDATE agenda SET
         celular='".$celular."',
         email='".$email."'
         WHERE id_agenda=".$id_agenda;
-
+}
 $result = mysqli_query($con,$sql);
 if($result)
     echo "Dados alterados co sucesso <br>";
