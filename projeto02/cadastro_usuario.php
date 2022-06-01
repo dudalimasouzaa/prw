@@ -12,12 +12,15 @@ if( in_array($imageFileType,$extensions_arr) ){
         $fotoBlob = addslashes(file_get_contents($target_dir.$fotoNome));
     }
 }
+
 $nome_usuario = $_POST['nome'];
 $email_usuario = $_POST['email'];
 $fone_usuario = $_POST['tel'];
+
 echo "<P> Nome do usuário: ".$nome_usuario."<br>";
 echo "<P> E-mail: ".$email_usuario."<br>";
 echo "<P> Telefone: ".$fone_usuario."<br>";
+
 $sql = "INSERT INTO usuario (nome_usuario, email_usuario, telefone_usuario, foto_blob, foto_nome)
         VALUES ('".$nome_usuario."','".$email_usuario."','".$fone_usuario."','".$fotoBlob."','".$fotoNome."')";
 
