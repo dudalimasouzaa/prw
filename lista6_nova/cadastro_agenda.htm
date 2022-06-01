@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: orange;
+    }
+</style>
+</head>
+<body>
+    <h1> Cadastro</h1>
+    <form action="cadastro_agenda.php" method="post" enctype="multipart/form-data">
+        
+        Nome: <input name="nome" size= "50" type="text"><br>
+        <p>Apelido: <input name="apelido" size= "50" type="text"><br>
+        <p>Endereço: <input name="endereco" size= "30" type="text"><br>
+        <p>Bairro: <input name="bairro" size= "30" type="text"><br>
+        <p>Cidade: <input name="cidade" size= "30" type="text"><br>
+        <p>Estado: <select name="estado" >
+            <option value="MT">MT</option>
+            <option value="MG">MG</option>
+            <option value="CE">CE</option>
+            <option value="BA">BA</option>
+            <option value="PR">PR</option>
+            <option value="GO">GO</option>
+            <option value="RS">RS</option>
+            <option value="SP">SP</option>
+            <option value="SC">SC</option>
+            <option value="PA">PA</option>
+            <option value="RJ">RJ</option>
+            <option value="PE">PE</option>
+            <option value="ES">ES</option>
+            <option value="MA">MA</option>
+            <option value="AM">AM</option>
+            <option value="SE">SE</option>
+            <option value="MS">MS</option>
+            <option value="RN">RN</option>
+            <option value="RO">RO</option>
+            <option value="PB">PB</option>
+            <option value="AL">AL</option>
+            <option value="PI">PI</option>
+            <option value="AC">AC</option>
+            <option value="RR">RR</option>
+            <option value="TO">TO</option>
+            <br>
+            </select>
+        <p>Telefone: <input name="telefone" size= "30" type="text"><br>
+        <p>Celular: <input name="celular" size= "30" type="text"><br>
+        <p>Email: <input name="email" size= "30" type="text"><br>
+        <input type="file" id="foto" name="foto" accept="image/*" />
+        <br><br><input id="btnEnviar" type="submit" value="Enviar">
+    </form>
+    <div>
+
+    </div>
+</body>
+</html>
