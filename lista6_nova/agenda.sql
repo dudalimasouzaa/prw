@@ -15,6 +15,6 @@ create table agenda(
     email varchar(70)	not null,
     dt_cadastro date    not null,
     foto_blob        blob,
-    foto_nome        varchar[100],
+    foto_nome        varchar(100),
     primary key(id_agenda)
 );
