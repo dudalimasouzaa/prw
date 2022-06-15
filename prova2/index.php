@@ -12,7 +12,7 @@
     <ul>
         <li><a href="cadastro_fluxo_caixa.htm">Cadastrar Fluxo de Caixa</a></li>
         <li><a href="listar_fluxo_caixa.php">Listagem de Fluxo de Caixa</a></li>
-        <li><a href="consulta_fluxo_caixa.php">Consulta Saldo do Caixa</a></li>
+        <li><a href="consulta_fluxo_caixa.htm">Consulta Saldo do Caixa</a></li>
     </ul>
 </div>
 </body>

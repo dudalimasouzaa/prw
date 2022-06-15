@@ -1,4 +1,4 @@
-DROP IF EXISTS fluxo_caixa;
+DROP TABLE IF EXISTS fluxo_caixa;
 CREATE TABLE fluxo_caixa(
     id  INTEGER NOT NULL AUTO_INCREMENT,
     data DATE   NOT NULL,
